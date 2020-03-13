@@ -1,0 +1,29 @@
+<body class ="contact_background">
+  <div class ="midashi">
+    <p>お問い合わせ</p>
+  </div>
+
+<%= form_with(model: @contact, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :お名前 %>
+    <%= form.text_field :name, :size=>"60" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :メールアドレス %>
+    <%= form.text_field :email, :size=>"60" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ご質問 %>
+    <%= form.text_area :body, :size=>"60x10" %>
+  </div>
+
+  <%= form.submit "送信する", class: "submit" %>
+
+<% end %>
+
+    <%= link_to  tops_path, class: 'btn btn-default' do %>
+      <span>トップページに戻る</span>
+    <% end %>
+</body>

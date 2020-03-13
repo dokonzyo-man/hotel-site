@@ -1,0 +1,43 @@
+<body class ="hotel_show_background">  
+  <div class ="midashi">
+    <p>ホテル詳細</p>
+  </div>
+    <div class ="abc">
+        <div class ="name">
+          <p><%= @hotel.name %></p>
+        </div>
+      <div class ="hotel-picture">
+        <p><%= image_tag(@hotel.picture_url, width: 600) if @hotel.picture.present? %></p>
+      </div>
+      <div class ="box-text">
+        <div class ="description">
+        	<p>ホテル紹介：<%= @hotel.description %></p>
+        </div>
+        <div class ="nearby">
+        	<p>アクセス・近隣：<%= @hotel.nearby %></p>
+        </div>
+
+      <ul class="reviews">
+        <% @reviews.each do |review| %>
+          <li class="review">
+           <h3>評価：<%= review.rating %></h3>
+           <h4><%= review.title %></h4>
+           <div><%= review.name %></div>
+           <p><%= review.opinion %></p>
+          </li>
+        <% end %>
+      </ul>
+
+	  </div>
+    </div>
+    <%= link_to  hotels_path, class: 'btn btn-default' do %>
+      <span>ホテル一覧へ戻る</span>
+    <% end %>
+    <%= link_to  new_hotel_review_path(@hotel), class: 'btn btn-default' do %>
+      <span>レビューを書き込む</span>
+    <% end %>
+    <%= link_to  new_hotel_reservation_path(@hotel), class: 'btn btn-default' do %>
+      <span>このホテルを予約</span>
+    <% end %>
+    <hr class ="style1">
+</body>

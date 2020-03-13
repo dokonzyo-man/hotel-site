@@ -1,0 +1,14 @@
+<body class ="review_background">	
+	<div class ="midashi">
+		<p>レビューをする</p>
+	</div>
+	<div class ="name">
+		<p><%= @hotel.name %></p>
+	</div>
+
+	<%= render 'form', review: @review %>
+
+	<%= link_to  hotel_path(@hotel), class: 'btn btn-default' do %>
+		<span>ホテル詳細へ戻る</span>
+	<% end %>
+</body>

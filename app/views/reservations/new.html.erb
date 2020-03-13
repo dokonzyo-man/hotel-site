@@ -1,0 +1,26 @@
+<body class ="reservation_background">
+    <%= form_for [@hotel, @hotel.reservations.new] do |f| %>
+
+    <%= f.hidden_field :hotel_id, value: @hotel.id %>
+        <div class ="theme">
+            <p><%= @hotel[:name] %>を予約する</p>
+        </div>
+            <div class="container">
+                <div class="count">
+                    <p>ご予約人数：<%= f.number_field :count %></p>
+                </div>
+                <div class='check_in'>
+                    <p>チェックイン日：<%= f.datetime_select :start_date, :class => 'form-control', :placeholder => "チェックイン日"%></p>
+                </div>
+                <div class='check_out'>
+                    <p>チェックアウト日：<%= f.datetime_select :end_date, :class => 'form-control', :placeholder => "チェックアウト日"%></p>
+                </div>
+            </div>
+
+            <%= f.submit "この日程で予約する", class: "submit" %>
+
+    <% end %>
+    <%= link_to  tops_path, class: 'btn btn-default' do %>
+      <span>トップページに戻る</span>
+    <% end %>
+</body>

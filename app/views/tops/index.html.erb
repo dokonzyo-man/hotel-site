@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ajito</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <h1>Ajito</h1>
+        </div>
+        <div class="header-right">
+          <% if user_signed_in? %>
+            <%= link_to 'プロフィール変更', edit_user_registration_path, :class => 'navbar-link' %> 
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <% else %>
+            <%= link_to "新規登録", new_user_registration_path, :class => 'navbar-link'  %> 
+            <%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+        </div>
+      </div>
+    </header>
+
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>帰れるホームがあるからこそ、</h1>
+        <h1>旅は楽しい。</h1>
+        <p>Ajitoは日本全国どこでも探せるホテルの予約サイトです。</p>
+        <p>信頼度の高いレビューを参考に、快適な旅の設計を楽しみましょう。</p>
+      </div>
+      <%= search_form_for @q do |f| %>
+      <%= f.label :name, "都道府県で検索" %>
+      <%= f.search_field :prefecture_name_cont %>
+      <%= f.submit "検索" %>
+      <% end %>
+
+      <%= search_form_for @q do |f| %>
+      <%= f.label :name, "ホテル名で検索" %>
+      <%= f.search_field :name_cont %>
+      <%= f.submit "検索" %>
+      <% end %>
+    </div>
+    <div class="characteristic-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>あなたがAjitoを信頼できる理由</h2>
+        </div>
+        <div class="characteristics">
+          <div class="characteristic">
+            <div class="characteristic-icon">
+              <img src="https://prog-8.com/images/html/advanced/html.png">
+              <p>充実のラインナップ</p>
+            </div>
+            <p class="txt-contents">Ajitoは東京だけでなく日本各地の魅力をお届けしたい！との思いから日本全国の旅館・ホテルを掲載させて頂いております。</p>
+          </div>
+          <div class="characteristic">
+            <div class="characteristic-icon">
+              <img src="https://prog-8.com/images/html/advanced/jQuery.png">
+              <p>レビュー数No.1！</p>
+            </div>
+            <p class="txt-contents">先にホテルに訪れた皆さまの「お仲間」に感想を寄せていただいております。中には辛辣なご感想もあるくらいなので参考にしてみて下さい。</p>
+          </div>
+          <div class="characteristic">
+            <div class="characteristic-icon">
+              <img src="https://prog-8.com/images/html/advanced/php.png">
+              <p>スタッフ確認済みの信頼</p>
+            </div>
+            <p class="txt-contents">当サイトに掲載されている旅館・ホテルは旅行のプロであるスタッフが実際に利用して「いい！」と思ったものだけです。いわばホテル版ミシュランです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>あなたも旅先でのAjitoを探してみませんか？</h2>
+        </div>
+        <!-- <span class="btn message">ホテルを見る</span> -->
+        <%= link_to "ホテル一覧へ", hotels_path, class: 'btn message' %>
+      </div>
+    </div>
+    <footer>
+      <div class ="footer-left">
+        <h1>Ajito</h1>
+      </div>
+      <div class="container">
+        <%= link_to "お問い合わせ", new_contact_path, class: 'contact' %>
+      </div>
+    </footer>
+  </body>
+</html>

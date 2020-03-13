@@ -1,0 +1,17 @@
+<h1>ホテルを編集する</h1>
+
+<%= form_with(model: @hotel, local: true) do |form| %>
+<!-- name -->
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :hotel_name %>
+  </div>
+<!-- description -->
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :hotel_description %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

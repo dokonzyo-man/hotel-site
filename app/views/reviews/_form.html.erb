@@ -1,0 +1,39 @@
+<%= form_with(model: [@hotel, review], local: true) do |form| %>
+  <% if review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(review.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :お名前 %>
+    <%= form.text_field :name, :size=>"60" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :題名 %>
+    <%= form.text_field :title, :size=>"60" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :評価（１－５） %>
+    <%= form.number_field :rating, :size=>"60" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :感想 %>
+    <%= form.text_area :opinion, :size=>"60x10" %>
+  </div>
+  
+<%= form.hidden_field :hotel_id %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

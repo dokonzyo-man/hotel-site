@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  title: MyString
+  hotel_id: 1
+  rating: 1
+  opinion: MyText
+
+two:
+  name: MyString
+  title: MyString
+  hotel_id: 1
+  rating: 1
+  opinion: MyText

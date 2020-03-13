@@ -1,0 +1,238 @@
+.hotel_show_background {
+    background-image: url(https://i1.wp.com/rich-rice.com/wp-content/uploads/2018/04/RRice-white-wave-01.jpg?resize=640%2C443&ssl=1);
+    background-size:cover;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif; 
+}
+
+.contact_background {
+    background-image: url(https://i1.wp.com/rich-rice.com/wp-content/uploads/2018/04/RRice-white-wave-01.jpg?resize=640%2C443&ssl=1);
+    background-size:cover; 
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif; 
+}
+
+.hotel_index_background {
+    background-image: url(https://d1f5hsy4d47upe.cloudfront.net/0c/0ce3b8b79513028848682bfd070e0167_t.jpeg);
+    background-size:cover;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif; 
+}
+
+.review_background {
+    background-image: url(https://i1.wp.com/rich-rice.com/wp-content/uploads/2018/04/RRice-white-wave-01.jpg?resize=640%2C443&ssl=1);
+    background-size:cover;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;  
+}
+
+.midashi{
+/*    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;*/
+    margin:  0;     
+    font-size:  24px;     
+    position:  relative; 
+    font-weight:  normal;   
+    margin-bottom: 15px;   
+    border-bottom: solid 4px rgba(76, 175, 80, 0.6);
+    border-radius: 0px 0px 160px 180px/0px 0px 20px 4px;
+}
+.midashi p {
+    margin: 0; 
+    padding: 0;
+}
+
+.name{
+	display: table;
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.name:before, .name:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.name:before {left: 10px;}
+.name:after {right: 10px;}
+.name p {
+    margin: 0; 
+    padding: 0;
+}
+
+.hotel-picture {
+	margin-bottom: 20px;
+    text-align: center;
+}
+
+.box-text {
+    /*text-align: center;*/
+}
+
+.description {
+	margin-bottom: 20px;
+
+}
+
+.nearby {
+	padding-bottom: 40px;
+
+}
+
+hr.style1 {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+/*.btn-default {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  color : #9ec34b;
+  background-color: #9ec34b;
+  border: 2px solid #9ec34b;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-default span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-default::before,
+.btn-default::after {
+  content: "";
+  display: block;
+  background-color: #FFF;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: .2s;
+}
+.btn-default::before {
+  left: 0;
+}
+.btn-default::after {
+  right: 0;
+}
+
+.btn-default:hover:before,
+.btn-default:hover:after {
+  width: 0;
+  background-color: #FFF;
+}*/
+
+.btn-default {
+  display: inline-block;
+  width: 180px;
+  height:50px;
+  text-align: center;
+  background-color: #9ec34b;
+  font-size: 16px;
+  line-height: 52px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #9ec34b;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-default span {
+    text-align: center;
+    line-height: 
+}
+.btn-default:after{
+  width: 100%;
+  height: 0;
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background : #FFF;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transition: .2s;
+  z-index: -1;
+}
+.btn-default:hover{
+  color: #9ec34b;
+}
+.btn-default:hover:after{
+  height: 240%;
+  opacity: 1;
+}
+.btn-default:active:after{
+  height: 340%;
+  opacity: 1;
+}
+
+
+/*hotel#show*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.reviews {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.review {
+  flex: 0 0 33%;
+  text-align: center;
+  border: 1px solid #eee;
+  padding-bottom: 1rem;
+  box-sizing: border-box;
+  margin:0 auto 3em;
+}
+.review h3{
+    background: #a2bc10;
+    color: #fff;
+    padding: 3px;
+    margin: 0;
+}
+
+.review h4{
+    font-size: 120%;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+}
+.review p{
+    margin: 0;
+    padding: 1rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px){
+.reviews {
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+.review {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
