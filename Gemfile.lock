@@ -139,8 +139,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
-    momentjs-rails (2.20.1)
-      railties (>= 3.1)
     msgpack (1.3.3-x86-mingw32)
     nested_form (0.3.2)
     nio4r (2.5.2)
@@ -280,7 +278,6 @@ DEPENDENCIES
   devise
   duktape
   jbuilder (~> 2.5)
-  momentjs-rails (>= 2.9.0)
   pg
   puma (~> 3.11)
   rails (~> 5.2.4)
