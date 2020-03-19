@@ -41,7 +41,7 @@
     padding: 0;
 }
 
-.name{
+.name {
 	display: table;
     margin:2em 0;
     position: relative;
@@ -234,4 +234,5 @@ ul {
 .review {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
+}
 }
