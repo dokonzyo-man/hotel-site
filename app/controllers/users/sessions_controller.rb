@@ -5,7 +5,8 @@ class Users::SessionsController < Devise::SessionsController
   def new_guest
     user = User.guest
     sign_in user
-    redirect_to root_path
+    redirect_to stored_location_for(:user) || root_path
+    # redirect_to root_path
     # after_sign_in_path_for(request.fullpath)
   end
   # GET /resource/sign_in

@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :set_search
   before_action :up_search
-  before_action :authenticate_user!
 
   def set_search
     @s = Prefecture.ransack(params[:s])
